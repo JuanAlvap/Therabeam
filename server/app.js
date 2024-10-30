@@ -51,12 +51,16 @@ async function getSheetData() {
   // Ruta para obtener los datos de Google Sheets
   app.get("/sheetdata", async (req, res) => {
     try {
-      const data = await getSheetData(); // Llama a la función para obtener los datos
-      res.json(data); // Envía los datos en formato JSON como respuesta
-      console.log(data[data.length-1])
+      const rows = await getSheetData(); // Espera la resolución de getSheetData
+      if (rows && rows.length > 0) {
+        const lastRow = rows[rows.length - 1]; // Obtener la última fila con datos
+        res.json(lastRow); // Enviar la última fila como respuesta en JSON
+      } else {
+        res.status(404).send("No data found.");
+      }
     } catch (error) {
       console.error("Error al obtener datos de Google Sheets:", error.message, error.response?.data);
-      res.status(500).send("Error al obtener datos"); // En caso de error, envía un mensaje de error
+      res.status(500).send("Error al obtener datos");
     }
   });
   //------------
