@@ -1,0 +1,45 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  link(rel='stylesheet', type = 'text/css' ,href='indexstyles.css')
+  title Laser
+.column1
+  nav
+    ul.navbar
+      li
+        a(href='') Home
+      li
+        a(href='index.html') Laser
+      li
+        a(href='credits.html') Credits
+  .config
+      img(src = 'imagen_laser.webp')
+  .config
+    label(for='') Tipo de lesion
+    .select-container(style='width:200px;')
+      select#lesion-select(name='')
+        option(value='quemadura') Quemadura
+        option(value='laceracion') Laceracion
+        option(value='hematoma') Hematoma
+        option(value='vaso') Vaso
+  .config
+    label(for='') Status
+    .status-container
+      div USUARIO
+      div Nombre Apellido
+      .auth-msg Autenticado por X-SEC entry
+.column2
+  .banner
+    img#logoxsec(src = 'xsec.jpeg', alt = 'xsec')
+    img#logo(src='laser.png' alt='logo')
+    h1#title THERABEAM LASER
+  .scanner
+    p.scannerTitle Escaner
+    .scannerIMG
+        img.scannerIMGin(src = 'imagendescargada.png', alt = 'imagendescargada.png no encontrada.')
+  .controller
+    a#shoot(href='/shoot') Shoot
+    a#shoot(href='/') Reset
+
+

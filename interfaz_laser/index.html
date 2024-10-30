@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="indexstyles.css">
+    <title>Laser</title>
+</head>
+<div class="column1">
+    <nav>
+        <ul class="navbar">
+            <li><a href="">Home</a></li>
+            <li><a href="index.html">Laser</a></li>
+            <li><a href="credits.html">Credits</a></li>
+        </ul>
+    </nav>
+    <div class="config"><img class="laserimg" src="imagen_laser.webp"></div>
+    <div class="config"><label for="">Tipo de lesion</label>
+        <div class="select-container" style="width:200px;"><select id="lesion-select" name=""><option value="quemadura">Quemadura</option><option value="laceracion">Laceracion</option><option value="hematoma">Hematoma</option><option value="vaso">Vaso</option></select></div>
+    </div>
+    <div class="config"><label for="">Status</label>
+        <div class="status-container">
+            <div>USUARIO</div>
+            <div>Nombre Apellido</div>
+            <div class="auth-msg">Autenticado por X-SEC entry</div>
+        </div>
+    </div>
+</div>
+<div class="column2">
+    <div class="banner"><img id="logoxsec" src="xsec.jpeg" alt="xsec"><img id="logo" src="laser.png" alt="logo">
+        <h1 id="title">THERABEAM LASER</h1>
+    </div>
+    <div class="scanner">
+        <p class="scannerTitle">Escaner</p>
+        <div class="scannerIMG"></div>
+    </div>
+    <div class="controller"><a id="shoot" href="/shoot">Shoot</a><a id="shoot" href="/">Reset</a></div>
+</div>
