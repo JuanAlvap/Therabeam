@@ -10,28 +10,22 @@ head
       li
         a(href='') Home
       li
-        a(href='index.html') Laser
+        a(href='/sheetdata1') Records
       li
         a(href='credits.html') Credits
   .config
-      img(src = 'imagen_laser.webp')
-  .config
-    label(for='') Tipo de lesion
-    .select-container(style='width:200px;')
-      select#lesion-select(name='')
-        option(value='quemadura') Quemadura
-        option(value='laceracion') Laceracion
-        option(value='hematoma') Hematoma
-        option(value='vaso') Vaso
+    img.laserimg(src = 'imagen_laser.webp')
+  .config 
+    label(for = '') Guia de uso
+    .projectinfo 
+      div Despues de ser autenticado por XSEC SENTRY, clickea "Shoot" para que TheraBeam Laser empiece el recorrido, espera que el recorrido termine para clickear denuevo.
   .config
     label(for='') Status
     .status-container
-      div USUARIO
-      div Nombre Apellido
       .auth-msg Autenticado por X-SEC entry
 .column2
   .banner
-    img#logoxsec(src = 'xsec.jpeg', alt = 'xsec')
+    img#logoxsec(src = 'xsec.png', alt = 'xsec')
     img#logo(src='laser.png' alt='logo')
     h1#title THERABEAM LASER
   .scanner
@@ -40,6 +34,8 @@ head
         img.scannerIMGin(src = 'imagendescargada.png', alt = 'imagendescargada.png no encontrada.')
   .controller
     a#shoot(href='/shoot') Shoot
-    a#shoot(href='/') Reset
+    a#shoot(href='/sheetdata') Authenticate
 
+
+    
 

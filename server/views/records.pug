@@ -1,0 +1,22 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  link(rel='stylesheet' href='recordsstyles.css')
+  title Document
+
+nav
+  ul.navbar
+    li
+      a(href='') Home
+    li
+      a(href='/sheetdata1') Records
+    li
+      a(href='credits.html') Credits
+.records-container
+  each e in rows
+    .element
+    each i in e 
+      .data= "  ---  " + i  
+    hr.solid
+

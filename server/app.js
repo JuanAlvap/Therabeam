@@ -54,7 +54,7 @@ async function getSheetData() {
       const rows = await getSheetData(); // Espera la resolución de getSheetData
       if (rows && rows.length > 0) {
         const lastRow = rows[rows.length - 1]; // Obtener la última fila con datos
-        res.json(lastRow); // Enviar la última fila como respuesta en JSON
+        res.render('indexpug', {lastRow}); // Enviar la última fila como respuesta en JSON
       } else {
         res.status(404).send("No data found.");
       }
@@ -125,8 +125,8 @@ let readData = () =>{
 app.get("/sheetdata1", async (req, res) => {
   try {
     const rows = await getSheetData(); // Espera la resolución de getSheetData
-    if (rows && rows.length > 0) { // Obtener la última fila con datos
-      res.json(rows); // Enviar la última fila como respuesta en JSON
+    if (rows && rows.length > 0) {
+      res.render('records', {rows}); 
     } else {
       res.status(404).send("No data found.");
     }

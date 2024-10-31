@@ -141,8 +141,9 @@ nav ul li a:hover{
     margin-top: 10px;
     background-color: #666;
     width: 340px;
-    height: 100px;
+    height: auto;
     border-radius: 3px;
+    overflow: auto;
 }
 
 .status-container div{

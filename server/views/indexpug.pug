@@ -10,7 +10,7 @@ head
       li
         a(href='') Home
       li
-        a(href='index.html') Records
+        a(href='/sheetdata1') Records
       li
         a(href='credits.html') Credits
   .config
@@ -22,12 +22,12 @@ head
   .config
     label(for='') Status
     .status-container
-      div USUARIO
-      div Nombre Apellido
+      each e in lastRow
+        div= e 
       .auth-msg Autenticado por X-SEC entry
 .column2
   .banner
-    img#logoxsec(src = 'xsec.jpeg', alt = 'xsec')
+    img#logoxsec(src = 'xsec.png', alt = 'xsec')
     img#logo(src='laser.png' alt='logo')
     h1#title THERABEAM LASER
   .scanner
@@ -35,5 +35,5 @@ head
     .scannerIMG
   .controller
     a#shoot(href='/shoot') Shoot
-    a#shoot(href='/') Reset
+    a#shoot(href='/sheetdata') Authenticate
 
