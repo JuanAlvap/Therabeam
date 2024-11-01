@@ -8,11 +8,11 @@ head
   nav
     ul.navbar
       li
-        a(href='') Home
+        a(href='/') Home
       li
         a(href='/sheetdata1') Records
       li
-        a(href='credits.html') Credits
+        a(href='/credits') Credits
   .config
     img.laserimg(src = 'imagen_laser.webp')
   .config 
@@ -22,6 +22,8 @@ head
   .config
     label(for='') Status
     .status-container
+      each e in lastRow
+        div= e 
       .auth-msg Autenticado por X-SEC entry
 .column2
   .banner
@@ -34,7 +36,7 @@ head
         img.scannerIMGin(src = 'imagendescargada.png', alt = 'imagendescargada.png no encontrada.')
   .controller
     a#shoot(href='/shoot') Shoot
-    a#shoot(href='/sheetdata') Authenticate
+    a#shoot(href='/') Authenticate
 
 
     

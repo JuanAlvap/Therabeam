@@ -49,7 +49,7 @@ async function getSheetData() {
 
   
   // Ruta para obtener los datos de Google Sheets
-  app.get("/sheetdata", async (req, res) => {
+  app.get("/", async (req, res) => {
     try {
       const rows = await getSheetData(); // Espera la resolución de getSheetData
       if (rows && rows.length > 0) {
@@ -65,9 +65,9 @@ async function getSheetData() {
   });
   //------------
 
-app.get('/', (req, res) => {
+/*app.get('/', (req, res) => {
     res.render('indexpug')
-})
+})*/
 
 app.post('/newupload', (req, res) => {
     let image64 = req.body ["uploadedimage"];
@@ -84,18 +84,34 @@ app.post('/auth', (req, res) => {
 
 })
 
-app.get('/shoot', (req, res) =>{
+app.get('/shoot', async (req, res) =>{
     //Lamamos el serialConnection.
     startMovement()
     console.log(readData())
     console.log('shooting...')
-    res.render('indexpugimg')
+    try {
+      const rows = await getSheetData(); // Espera la resolución de getSheetData
+      if (rows && rows.length > 0) {
+        const lastRow = rows[rows.length - 1]; // Obtener la última fila con datos
+        res.render('indexpugimg', {lastRow}); // Enviar la última fila como respuesta en JSON
+      } else {
+        res.status(404).send("No data found.");
+      }
+    } catch (error) {
+      console.error("Error al obtener datos de Google Sheets:", error.message, error.response?.data);
+      res.status(500).send("Error al obtener datos");
+    }
 
 })
 
 app.listen(PORT, () =>{
     console.log('LISTENING TO PORT 3466');
     console.log('ENDPOINTS: \n/\n/uploadimage');
+});
+
+app.get('/credits', (req, res) =>{
+  //Lamamos el serialConnection.
+  res.render('credits')
 });
 
 
