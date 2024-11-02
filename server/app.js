@@ -132,6 +132,7 @@ port.on('error', function(err) {
 });
 
 // Leer los datos que vienen del puerto serial (opcional, si el Arduino envía datos)
+//Revisar metodo, posible bug por exceso instancia de seriales
 let readData = () =>{
   port.on('data', function(data) {
       return data.toString();

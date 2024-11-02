@@ -1,12 +1,12 @@
 body{
     display: flex;
-    background-color: #f0f4f8;
+    background-color: #D1E9FF;
     overflow-y: hidden;
     /* Fondo azul claro */
 }
 
 .column1{
-    background-color: #efefef;
+    background-color: #9DBFDA;
     display: flex;
     flex-direction: column;
     width: 30vw;
@@ -35,20 +35,20 @@ body{
 
 .laserimg{
     position: relative;
-    width: 340px;
-    height: 280px;
+    width: auto;
+    height: 475px;
     left: -15px;
     top: -4px
 
 }
 
 .scannerIMG{
-    background-color: white;
+    background-color: #EBF3FA;
     border-color: #000;
     border-style:outset;
-    border: 1px solid #ccc;
+    border: 5px solid #023047;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
-    border-radius: 5px;
+    border-radius: 10px;
     width: 900px;
     height: 400px;
     margin: 0px 20px 10px 60px;
@@ -57,19 +57,26 @@ body{
 }
 
 .scannerTitle{
-    margin-left: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0px;
+    padding: 10px;
+    border-radius: 5px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: xx-large;
+    background-color: #7CA4C3;
 }
 
 nav{
     border-radius: 3px;
     height: 50px;
-    background-color: #333;
+    background-color: #023047;
 }
 
 .navbar{
     list-style: none;
     display: flex;
+    
 }
 
 .navbar li a{
@@ -121,11 +128,11 @@ nav ul li a:hover{
 }
 
 .projectinfo{
-    background-color: #666;
+    background-color: #9DBFDA;
     border-radius:3px;
     width: 340px;
     margin-top: 10px;
-    
+    border-bottom: 2px solid black;    
 }
 
 .select-container{
@@ -139,7 +146,7 @@ nav ul li a:hover{
 
 .status-container{
     margin-top: 10px;
-    background-color: #666;
+    background-color: #9DBFDA;
     width: 340px;
     height: auto;
     border-radius: 3px;
@@ -151,16 +158,21 @@ nav ul li a:hover{
 }
 
 .auth-msg{
-    color: #40ff00;
+    color: black;
+    font-weight: 600;
+    font-style: italic;
+    font-size: larger;
+    text-decoration: underline;
 }
 
 #shoot {
   margin-left: 70px;
   margin-top: 20px;
-  background-image: linear-gradient(#199319, #2db300);
-  color: white;
+  background-image: linear-gradient(#194259, #7CA4C3);
+  color: #DEEEFD;
   padding: 15px 25px;
   text-decoration: none;
+  border: 2px solid #023047;
 }
 
 #shoot:hover{

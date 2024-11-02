@@ -1,6 +1,7 @@
 html {
     height: 100%;
 }
+
 body {
     background-image: linear-gradient(to bottom right, #023047, #9DBFDA);
     height: 100%;
@@ -12,7 +13,7 @@ body {
     flex-direction: column;
 }
 
-.records-container{
+.records-container {
     padding-left: 15px;
     padding-top: 15px;
     padding-right: 15px;
@@ -28,26 +29,26 @@ body {
     display: inline;
 }
 
-nav{
+nav {
     border-radius: 3px;
     height: 50px;
     background-color: #333;
 }
 
-.navbar{
+.navbar {
     list-style: none;
     display: flex;
 }
 
-.navbar li a{
+.navbar li a {
     text-decoration: none;
-    color: #eee;   
+    color: #eee;
     padding: 16px 20px 18px 20px;
     margin-right: 20px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-nav ul li a:hover{
+nav ul li a:hover {
     background-color: #eee;
     color: #333;
 }
